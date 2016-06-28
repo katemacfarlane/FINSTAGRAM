@@ -15,6 +15,3 @@ main{
 .post .user-info img {
     border-radius: 50%;
 }
-.post:hover{ 
-    color: red
-}
