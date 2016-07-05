@@ -7,7 +7,7 @@ def humanized_time_ago(time_ago_in_minutes)
 end
 
 get '/' do
-    post_kate = {
+    @post_kate = {
         username: "katemacfarlane",
         avatar_url:"https://pbs.twimg.com/profile_images/689895732497813504/3MPlb0V7_400x400.jpg",
         photo_url:"https://pbs.twimg.com/media/CfoKws4WEAI28Ff.jpg:large",
@@ -20,7 +20,7 @@ get '/' do
             }]
         }
         
-    post_allee = {
+    @post_allee = {
         username: "alleethompson",
         avatar_url:"https://pbs.twimg.com/profile_images/489918105238269953/rc8Yhb5V.jpeg",
         photo_url:"https://pbs.twimg.com/media/B-BAFadCAAEQW48.jpg",
@@ -33,7 +33,7 @@ get '/' do
             }]
         }
         
-    post_georgia = {
+    @post_georgia = {
         username: "georgiagracevogeli",
         avatar_url:"https://pbs.twimg.com/profile_images/743646889426329601/e-Fpphll_400x400.jpg",
         photo_url:"https://pbs.twimg.com/media/CR72DmEWIAAmUO1.jpg",
@@ -46,5 +46,6 @@ get '/' do
             }]
         }
  
-    [post_kate, post_allee, post_georgia].to_s
+    [@post_kate, @post_allee, @post_georgia].to_s
+    erb :index
 end
