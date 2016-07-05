@@ -46,6 +46,7 @@ get '/' do
             }]
         }
  
-    [@post_kate, @post_allee, @post_georgia].to_s
-    erb :index
+    @posts = [@post_kate, @post_allee, @post_georgia]
+    
+    erb (:index)
 end
