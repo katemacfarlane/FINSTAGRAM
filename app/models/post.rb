@@ -15,6 +15,8 @@ class Post < ActiveRecord::Base
         end 
       end 
       
+    validates_presence_of :photo_url, :user
+      
       def like_count
         self.likes.size
       end
@@ -22,5 +24,4 @@ class Post < ActiveRecord::Base
       def comment_count
         self.comments.size
       end
-    
 end
