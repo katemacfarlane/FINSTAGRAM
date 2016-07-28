@@ -5,8 +5,12 @@ helpers do
 end
 
 get '/' do
+  if current_user
     @posts = Post.order(created_at: :desc)
     erb (:index)
+  else 
+  redirect('/login')
+  end
 end
 
 get '/signup' do     # if a user navigates to the path "/signup",
