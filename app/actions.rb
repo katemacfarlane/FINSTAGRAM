@@ -47,7 +47,7 @@ post '/login' do
     session[:user_id] = user.id
     redirect(to('/'))
   else
-    @error_message = "ERROR: GTFO U HOE"
+    @error_message = "ERROR"
     erb(:login)
   end
 end
